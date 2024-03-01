@@ -1,27 +1,31 @@
 <?php
 
-$koneksi = mysqli_connect("localhost","root","","login");
 
-//login
+$koneksi = mysqli_connect("localhost","root","","dataasmara");
+
+
 
 if(isset($_POST['login'])) {
-    $username = $_POST['uname'];//"reza"
-    $password = $_POST['psw'];//3210
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-    $cekuser = mysqli_query($koneksi,"select role from user where username= '$username' and password='$password'");
-    //role ==> pelanggan <> nullv
+    $cekuser = mysqli_query($koneksi, "select role from user where username = '$username' and password ='$password'");
+    
 
-    $role = mysqli_fetch_assoc($cekuser)["role" ];
-
-    $hitung = mysqli_num_rows($cekuser);//max 1 min 0
+    $role = mysqli_fetch_assoc($cekuser)["role"]; 
+    
+    $hitung = mysqli_num_rows($cekuser);
     if($hitung == 0){
-        echo "login gagal";
-        header('location:login');
+        echo '<script language="javascript">';
+        echo 'alert("Maaf, anda tidak berhak masuk");';
+        echo 'window.location.href = "index.php";';
+        echo '</script>';
+        exit();
     }else{
-        if($role == 'cs'){
-            header('location:cs');
-        }elseif($role =='kasir'){
-            header('location:kasir');
+        if($role == 'admin'){
+            header('location:admin');
+        }elseif($role =='resepsionis'){
+            header('location:resepsionis');
         }elseif($role =='direktur'){
             header('location:direktur');
         }elseif($role =='akuntan'){

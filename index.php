@@ -1,8 +1,3 @@
-<?php
-
-require 'funcition.php';
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,19 +43,21 @@ require 'funcition.php';
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4" style="font-weight: bold;">ASMARA GROUP</h1>
                                     </div>
-                                    <form method="post">
+                                    <form method="POST" action="funcition.php">
+                                        <!-- Section Username -->
                                         <div class="form-group">
-                                            <label for="uname"></label>
+                                            <label for="username">Username</label>
                                             <input type="text" class="form-control form-control-user"
-                                                id="ID" placeholder="username" name="uname" required>
+                                            placeholder="username" name="username" required>
                                         </div>
+                                        <!-- Section Password -->
                                         <div class="form-group">
-                                            <label for="psw"></label>
+                                            <label for="psw">Password</label>
                                             <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="password" name="psw" required>
+                                            placeholder="password" name="password" required>
                                         </div>
                                         
-                                        <button type="submit" name="login">Login</button>
+                                        <button class="btn btn-success" type="submit" name="login">Login</button>
     
                                         <hr>
                                     </form>
