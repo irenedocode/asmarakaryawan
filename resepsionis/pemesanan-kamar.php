@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Resepsionis - Asmara Group</title>
+    <title>Resepsionis - Kamar - Asmara Group</title>
 
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -43,10 +43,10 @@
 
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="index.php">Home</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="pemesanan-kamar.php">Pemesanan Kamar</a>
                         </li>
                         <li class="nav-item">
@@ -171,6 +171,155 @@
 
                         
 
+                            <!-- Approach -->
+                            <div class="card shadow mb-9">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary text-center">Formulir Pemesanan Kamar</h6>
+                                </div>
+                                    <div class="card-body">
+                                        <form action="" method="post">
+                                            <h2 class="text-center">Data Pemesan</h2> <br>
+                                            <p class="text-center text-primary">Masukkan Nama:</p>
+                                        <div class="form-group row">
+                                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                                <input type="text" class="form-control form-control-user text-center" name="namadepan"
+                                                    placeholder="Depan">
+                                            </div>
+                                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                                <input type="text" class="form-control form-control-user text-center" name="namabelakang"
+                                                    placeholder="Belakang">
+                                            </div>
+                                        </div>
+
+                                        <p class="text-center text-primary">Masukkan Alamat Lengkap:</p>
+                                        <div class="form-group">
+                                                    <input 
+                                                    type="text" 
+                                                    name="alamat"
+                                                    class="form-control form-control-user text-center"
+                                                    placeholder="Alamat Lengkap">
+                                        </div>
+
+                                        <p class="text-center text-primary">Masukkan Nomor Telepon:</p>
+                                        <div class="form-group">
+                                                    <input 
+                                                    type="number" 
+                                                    name="nomortelepon"
+                                                    class="form-control form-control-user text-center"
+                                                    placeholder="Nomor Telepon">
+                                        </div>
+
+                                        <p class="text-center text-primary">Masukkan Alamat Email:</p>
+                                        <div class="form-group">
+                                                    <input 
+                                                    type="email" 
+                                                    name="email"
+                                                    class="form-control form-control-user text-center"
+                                                    placeholder="Alamat Email">
+                                        </div>
+                                        <br>
+                                        <hr class="sidebar-divider"></hr>
+                                        <h2 class="text-center">Informasi Pemesanan</h2> 
+                                        <br>
+
+                                        <p class="text-center text-primary">Masukkan Tanggal dan Waktu Kedatangan:</p>
+                                        <div class="form-group">
+                                                    <input 
+                                                    type="date" 
+                                                    name="datang"
+                                                    class="form-control form-control-user text-center"
+                                                    placeholder="">
+                                        </div>
+
+                                        <label class="text-center" for="durasi">Masukkan Tanggal dan Waktu Kepergian:</label>
+                                        <div class="form-group">
+                                                    <input 
+                                                    type="date" 
+                                                    name="pergi"
+                                                    class="form-control form-control-user text-center"
+                                                    placeholder="">
+                                        </div>
+
+                                        <br>
+                                        <hr class="sidebar-divider"></hr>
+                                        <h2 class="text-center">Akomodasi</h2> 
+                                        <br>
+
+                                        <div class="form-group row">
+                                        <form class="form-inline">
+                                            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                                <option selected>Dewasa</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+
+                                            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                                <option selected>Anak-anak < 12 Tahun</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </form>
+
+                                            <br>
+
+                                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <p>*bayi dibawah 1 tahun menginap gratis</p>
+                                            </div>
+                                        </div>
+
+                                        <label class="text-center" for="durasi">Durasi Menginap:</label>
+                                        <div class="form-group" id="durasi">
+                                                    <input 
+                                                    type="number" 
+                                                    name="durasi"
+                                                    class="form-control form-control-user text-center"
+                                                    placeholder="durasi">
+                                        </div>
+
+                                        <br>
+                                        <hr class="sidebar-divider"></hr>
+                                        <h2 class="text-center">Pembayaran</h2> 
+                                        <br>
+
+                                        <p class="text-center" for="metodepembayaran">Metode Pembayaran:</p>
+                                        <div class="form-check form-check-inline align-center">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                            <label class="form-check-label" for="inlineRadio1">Tunai</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                            <label class="form-check-label" for="inlineRadio2">Kartu Kredit</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                            <label class="form-check-label" for="inlineRadio3">Kartu Debit</label>
+                                            </div>
+
+                                        <p class="text-center" for="permintaan">Permintaan Khusus</p>
+
+                                        <div class="form-group" id="permintaan">
+                                        <textarea class="form-control text-center" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        </div>
+
+                                        <br>
+                                        <p class="text-center" for="permintaan">Subtotal dkk</p>
+
+                                        <div class="row" style="margin-top: 80px"> 
+                                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <a class="btn btn-primary" style="width: 200px" href="index.php">Kembali</a>
+                                            </div>
+
+                                            <div class="col-sm-6 mb-3 mb-sm-0" style="text-align: right;">
+                                            <button class="btn btn-primary" style="width: 200px" type="submit" name="submit">Kirim</button>
+                                            </div>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                        </div>
                     
 
                 </div>
